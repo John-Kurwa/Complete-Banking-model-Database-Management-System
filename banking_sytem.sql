@@ -32,6 +32,8 @@ CREATE TABLE Client_MSTR (
 );    
 
 -- details for the accounts created by clients.
+-- One client can have many accounts
+-- One account belongs to one branch
 CREATE TABLE Account_MSTR (
     accNo_ID INT AUTO_INCREMENT PRIMARY KEY,
     sf_NO varchar(30),
@@ -46,6 +48,7 @@ CREATE TABLE Account_MSTR (
 );   
 
 -- details showing transactions. 
+-- One account can have many transactions
 CREATE TABLE Trans_MSTR  (
     transaction_ID INT AUTO_INCREMENT PRIMARY KEY,
     accNo_id INT NOT NULL,
@@ -56,6 +59,8 @@ CREATE TABLE Trans_MSTR  (
 );
 
 -- details showing loans structure.
+-- Many-to-Many: A client can have multiple loans,
+-- and loans can involve multiple customers (co-borrowers)
 CREATE TABLE Loans_MSTR (
     loan_ID INT AUTO_INCREMENT PRIMARY KEY,
     amount DECIMAL(15,2) NOT NULL,
