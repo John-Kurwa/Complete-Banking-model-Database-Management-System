@@ -13,7 +13,7 @@ This project implements a relational database schema for a simple banking system
 ## Setup Instructions
 1. Install MySQL on your system.
 2. Clone this repository.
-3. Import `bank_system.sql` into your MySQL instance:
+3. Import `banking_system.sql` into your MySQL instance:
 4. Link for Entity Relationship Diagram (https://dbdiagram.io/d/681de2d35b2fc4582fe7b72c)
 ```bash
-mysql -u your_user -p your_database < bank_system.sql
+mysql -u your_user -p your_database < banking_system.sql
